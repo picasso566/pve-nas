@@ -7,10 +7,10 @@
 #---- Bash command to run script ---------------------------------------------------
 
 #---- Source Github
-# bash -c "$(wget -qLO - https://raw.githubusercontent.com/ahuacate/pve-nas/main/pve_nas_installer.sh)"
+# bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/pve_nas_installer.sh)"
 
 #---- Source local Git
-# /mnt/pve/nas-01-git/ahuacate/pve-nas/pve_nas_installer.sh
+# /mnt/pve/nas-01-git/picasso566/pve-nas/pve_nas_installer.sh
 
 #---- Source -----------------------------------------------------------------------
 #---- Dependencies -----------------------------------------------------------------
@@ -434,11 +434,11 @@ then
 elif [ "$VM_DISK_PT" = 1 ]
 then
   # PCIe disk Pass-through
-  display_msg1="Using the PVE web interface on PVE host '$(hostname)', go to VM '${VMID} (${HOSTNAME,,})' > '_Shell' and start the VM. The OMV installation frontend WebGUI will start. Complete the OMV installation as per our Github guide:\n\n    --  https://github.com/ahuacate/nas-hardmetal\n\nAfter completing the OMV installation your login credentials are:\n\n    Web interface\n    --  URL: http://${HOSTNAME,,}.$(hostname -d) (hostname.domain)\n    --  User: admin\n    --  Password: openmediavault\n\n    Client (SSH, console)\n    --  User: root\n    --  Password: The password that you have set during installation."
+  display_msg1="Using the PVE web interface on PVE host '$(hostname)', go to VM '${VMID} (${HOSTNAME,,})' > '_Shell' and start the VM. The OMV installation frontend WebGUI will start. Complete the OMV installation as per our Github guide:\n\n    --  https://github.com/picasso566/nas-hardmetal\n\nAfter completing the OMV installation your login credentials are:\n\n    Web interface\n    --  URL: http://${HOSTNAME,,}.$(hostname -d) (hostname.domain)\n    --  User: admin\n    --  Password: openmediavault\n\n    Client (SSH, console)\n    --  User: root\n    --  Password: The password that you have set during installation."
 elif [ "$VM_DISK_PT" = 2 ]
 then
   # PCIe HBA Pass-through
-  display_msg1="You have chosen to configure your NAS with PCIe HBA card pass-through. Steps to be taken are:\n\n    --  Connect your NAS disks to your SATA/SAS/NVMe PCIe HBA card\n    --  Follow the steps in our guide: https://github.com/ahuacate/nas-hardmetal\n\nAfter configuring your PCIe HBA card pass-through using the PVE web interface on PVE host '$(hostname)', go to VM '${VMID} (${HOSTNAME,,})' > '_Shell' and start the VM. The OMV installation frontend WebGUI will start. Complete the OMV installation as per our Github guide:\n\n    --  https://github.com/ahuacate/nas-hardmetal\n\nAfter completing the OMV installation your login credentials are:\n\n    Web interface\n    --  URL: http://${HOSTNAME,,}.$(hostname -d) (hostname.domain)\n    --  User: admin\n    --  Password: openmediavault\n\n    Client (SSH, console)\n    --  User: root\n    --  Password: The password that you have set during installation."
+  display_msg1="You have chosen to configure your NAS with PCIe HBA card pass-through. Steps to be taken are:\n\n    --  Connect your NAS disks to your SATA/SAS/NVMe PCIe HBA card\n    --  Follow the steps in our guide: https://github.com/picasso566/nas-hardmetal\n\nAfter configuring your PCIe HBA card pass-through using the PVE web interface on PVE host '$(hostname)', go to VM '${VMID} (${HOSTNAME,,})' > '_Shell' and start the VM. The OMV installation frontend WebGUI will start. Complete the OMV installation as per our Github guide:\n\n    --  https://github.com/picasso566/nas-hardmetal\n\nAfter completing the OMV installation your login credentials are:\n\n    Web interface\n    --  URL: http://${HOSTNAME,,}.$(hostname -d) (hostname.domain)\n    --  User: admin\n    --  Password: openmediavault\n\n    Client (SSH, console)\n    --  User: root\n    --  Password: The password that you have set during installation."
 fi
 
 msg_box "${HOSTNAME^^} VM creation was a success. To complete the build you must now follow these steps.

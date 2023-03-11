@@ -7,10 +7,10 @@
 #---- Bash command to run script ---------------------------------------------------
 
 #---- Source Github
-# bash -c "$(wget -qLO - https://raw.githubusercontent.com/ahuacate/pve-nas/main/pve_nas_installer.sh)"
+# bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/pve_nas_installer.sh)"
 
 #---- Source local Git
-# /mnt/pve/nas-01-git/ahuacate/pve-nas/pve_nas_installer.sh
+# /mnt/pve/nas-01-git/picasso566/pve-nas/pve_nas_installer.sh
 
 #---- Source -----------------------------------------------------------------------
 #---- Dependencies -----------------------------------------------------------------
@@ -188,7 +188,7 @@ source $COMMON_PVE_SRC_DIR/pvesource_ct_intro.sh
 if [ "$SMTP_STATUS" = 0 ]
 then
   # Options if SMTP is inactive
-  display_msg='Before proceeding with this installer we RECOMMEND you first configure all PVE hosts to support SMTP email services. A working SMTP server emails the NAS System Administrator all new User login credentials, SSH keys, application specific login credentials and written guidelines. A PVE host SMTP server makes NAS administration much easier. Also be alerted about unwarranted login attempts and other system critical alerts. PVE Host SMTP Server installer is available in our PVE Host Toolbox located at GitHub:\n\n    --  https://github.com/ahuacate/pve-host'
+  display_msg='Before proceeding with this installer we RECOMMEND you first configure all PVE hosts to support SMTP email services. A working SMTP server emails the NAS System Administrator all new User login credentials, SSH keys, application specific login credentials and written guidelines. A PVE host SMTP server makes NAS administration much easier. Also be alerted about unwarranted login attempts and other system critical alerts. PVE Host SMTP Server installer is available in our PVE Host Toolbox located at GitHub:\n\n    --  https://github.com/picasso566/pve-host'
 
   msg_box "#### PLEASE READ CAREFULLY ####\n\n$(echo ${display_msg})"
   echo
@@ -203,7 +203,7 @@ then
   if [ "$RESULTS" = 'TYPE01' ]
   then
     # Exit and install SMTP
-    msg "Go to our Github site and run our PVE Host Toolbox selecting our 'SMTP Email Setup' option:\n\n  --  https://github.com/ahuacate/pve-host\n\nRe-run the NAS installer after your have configured '$(hostname)' SMTP email support. Bye..."
+    msg "Go to our Github site and run our PVE Host Toolbox selecting our 'SMTP Email Setup' option:\n\n  --  https://github.com/picasso566/pve-host\n\nRe-run the NAS installer after your have configured '$(hostname)' SMTP email support. Bye..."
     echo
     exit 0
   elif [ "$RESULTS" = 'TYPE02' ]
@@ -413,5 +413,5 @@ display_msg4=( "$x${HOSTNAME}.$(hostname -d)\:" )
 display_msg4+=( "$x$(pct exec $CTID -- hostname -I | sed -r 's/\s+//g')\: (${ip_type})" )
 
 # Display msg
-msg_box "${HOSTNAME^^} installation was a success.\n\nTo manage your new Ubuntu NAS use ${webgui_type^} (a Linux web management tool). ${webgui_type^} login credentials are user 'root' and password '$CT_PASSWORD'. You can change your 'root' password using the ${webgui_type^} WebGUI.\n\n$(printf '%s\n' "${display_msg1[@]}" | indent2)\n\nUse our 'Easy Script Toolbox' to install add-ons and perform other tasks. More information is available here: https://github.com/ahuacate/pve-nas\n\n$(printf '%s\n' "${display_msg2[@]}" | column -s ":" -t -N "APPLICATION,STATUS" | indent2)\n\nAlso use our 'Easy Scripts Toolbox' to create or delete NAS user accounts.\n\n$(printf '%s\n' "${display_msg3[@]}" | column -s ":" -t -N "USER ACCOUNT TYPE,DESCRIPTION" | indent2)\n\nTo access ${HOSTNAME^^} files use SMB.\n\n$(printf '%s\n' "${display_msg4[@]}" | column -s ":" -t -N "SMB NETWORK ADDRESS" | indent2)\n\nNFSv4 is enabled and ready for creating PVE host storage mounts.\n\n${HOSTNAME^^} will now reboot."
+msg_box "${HOSTNAME^^} installation was a success.\n\nTo manage your new Ubuntu NAS use ${webgui_type^} (a Linux web management tool). ${webgui_type^} login credentials are user 'root' and password '$CT_PASSWORD'. You can change your 'root' password using the ${webgui_type^} WebGUI.\n\n$(printf '%s\n' "${display_msg1[@]}" | indent2)\n\nUse our 'Easy Script Toolbox' to install add-ons and perform other tasks. More information is available here: https://github.com/picasso566/pve-nas\n\n$(printf '%s\n' "${display_msg2[@]}" | column -s ":" -t -N "APPLICATION,STATUS" | indent2)\n\nAlso use our 'Easy Scripts Toolbox' to create or delete NAS user accounts.\n\n$(printf '%s\n' "${display_msg3[@]}" | column -s ":" -t -N "USER ACCOUNT TYPE,DESCRIPTION" | indent2)\n\nTo access ${HOSTNAME^^} files use SMB.\n\n$(printf '%s\n' "${display_msg4[@]}" | column -s ":" -t -N "SMB NETWORK ADDRESS" | indent2)\n\nNFSv4 is enabled and ready for creating PVE host storage mounts.\n\n${HOSTNAME^^} will now reboot."
 #-----------------------------------------------------------------------------------

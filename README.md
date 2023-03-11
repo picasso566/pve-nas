@@ -50,7 +50,7 @@ All builds include:
 
 <h2>Local DNS Records</h2>
 
-Before proceeding, we <span style="color:red">strongly advise</span> that you familiarize yourself with network Local DNS and the importance of having a PiHole server. To learn more, click <a href="https://github.com/ahuacate/common/tree/main/pve/src/local_dns_records.md" target="_blank">here</a>.
+Before proceeding, we <span style="color:red">strongly advise</span> that you familiarize yourself with network Local DNS and the importance of having a PiHole server. To learn more, click <a href="https://github.com/picasso566/common/tree/main/pve/src/local_dns_records.md" target="_blank">here</a>.
 
 It is essential to set your network's Local Domain or Search domain. For residential and small networks, we recommend using only top-level domain (spTLD) names because they cannot be resolved across the internet. Routers and DNS servers understand that ARPA requests they do not recognize should not be forwarded onto the public internet. It is best to select one of the following names: local, home.arpa, localdomain, or lan only. We strongly advise against using made-up names.
 
@@ -86,7 +86,7 @@ PCIe SAS/SATA/NVMe HBA Adapter Card (i.e LSI 9207-8i) pass-through will likely d
 A dedicated PCIe SAS/SATA/NVMe HBA Adapter Card (i.e LSI 9207-8i) is required for all NAS storage disks. All OMV storage disks, including any LVM/ZFS Cache SSDs, must be connected to the HBA Adapter Card. You cannot co-mingle OMV disks with the PVE host's mainboard onboard SATA/NVMe devices. OMV manages both the backend and front end. Requires PVE host bootloader kernel config file edits shown [here](https://pve.proxmox.com/wiki/Pci_passthrough#Introduction) before installing.
 </ol>
 
-For a dedicated hard-metal NAS, not Proxmox hosted, go to this GitHub [repository](https://github.com/ahuacate/nas-hardmetal). Options include between Easy Scripts to configure a Synology v7 or OMV NAS appliance.
+For a dedicated hard-metal NAS, not Proxmox hosted, go to this GitHub [repository](https://github.com/picasso566/nas-hardmetal). Options include between Easy Scripts to configure a Synology v7 or OMV NAS appliance.
 
 <h4><b>Easy Scripts</b></h4>
 
@@ -100,13 +100,13 @@ However, before proceeding, we highly recommend that you read our guide to fully
 Use this script to start the PVE NAS installer for all PVE NAS types. The User will be prompted to select an installation type (i.e Ubuntu, USB, OMV). Run in a PVE host SSH terminal.
 
 ```bash
-bash -c "$(wget -qLO - https://raw.githubusercontent.com/ahuacate/pve-nas/main/pve_nas_installer.sh)"
+bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/pve_nas_installer.sh)"
 ```
 <h4><b>2) PVE Ubuntu NAS Toolbox Easy Script</b></h4>
 For creating and deleting user accounts, installing optional add-ons and upgrading your Ubuntu NAS OS. Run in your PVE host SSH terminal.
 
 ```bash
-bash -c "$(wget -qLO - https://raw.githubusercontent.com/ahuacate/pve-nas/main/pve_nas_toolbox.sh)"
+bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/pve_nas_toolbox.sh)"
 ```
 
 <hr>
@@ -182,7 +182,7 @@ Prepare your PVE host with a PCIe SAS/SATA/NVMe HBA Adapter Card (i.e LSI 9207-8
 Use this script to start the PVE NAS Installer. You will be prompted to select an installation type. Select `Omv Nas - OMV based NAS`. Run in a PVE host SSH terminal.
 
 ```bash
-bash -c "$(wget -qLO - https://raw.githubusercontent.com/ahuacate/pve-nas/main/pve_nas_installer.sh)"
+bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/pve_nas_installer.sh)"
 ```
 
 ## 2.2. PCIe Passthrough (optional)
@@ -193,7 +193,7 @@ If you configure a "PCI passthrough" device, the device is not available to the 
 Navigate using the Proxmox web interface to VM `vmid (nas-xx)` > `Hardware` > `Add` > `PCI device` and select a PCIe HBA device. The selected device will be passed through to your NAS.
 
 ## 2.3. Configuring OMV NAS VM
-After creating your OMV VM go to our detailed [configuration guide](https://github.com/ahuacate/nas-hardmetal) to complete the installation. Follow all the OMV-related steps.
+After creating your OMV VM go to our detailed [configuration guide](https://github.com/picasso566/nas-hardmetal) to complete the installation. Follow all the OMV-related steps.
 
 <hr>
 
@@ -204,7 +204,7 @@ Prepare all new disks by wiping them. You can also re-connect to an existing Ubu
 Use this script to start the PVE NAS Installer. The User will be prompted to select an installation type. Select `Ubuntu Nas - Ubuntu CT based NAS`. Run in your PVE host SSH terminal.
 
 ```bash
-bash -c "$(wget -qLO - https://raw.githubusercontent.com/ahuacate/pve-nas/main/pve_nas_installer.sh)"
+bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/pve_nas_installer.sh)"
 ```
 
 ## 3.2. Supported File Systems
@@ -275,7 +275,7 @@ Tasks include:
 Run the following Easy Script, select your and select the task you want to perform. Run in a PVE host SSH terminal.
 
 ```Ubuntu NAS administration tasks
-bash -c "$(wget -qLO - https://raw.githubusercontent.com/ahuacate/pve-nas/main/pve_nas_toolbox.sh)"
+bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/pve_nas_toolbox.sh)"
 ```
 
 <hr>
@@ -299,7 +299,7 @@ You need a designated administrator email address. All server alerts and activit
 Before proceeding with this installer we recommend you first configure all PVE hosts to support SMTP email services. A working SMTP server emails the NAS System Administrator all-new User login credentials, SSH keys, application-specific login credentials and written guidelines.
 
 A PVE host SMTP server makes NAS administration much easier. Also, be alerted about unwarranted login attempts and other system critical alerts. PVE Host SMTP Server installer is available in our PVE Host Toolbox located at GitHub:
-* https://github.com/ahuacate/pve-host
+* https://github.com/picasso566/pve-host
 
 We recommend you create an account at [Mailgun](https://mailgun.com) to relay your NAS system emails to your designated administrator. With [Mailgun](https://mailgun.com) you are not potentially exposing your private email server credentials held within a text file on your NAS. This is an added layer of security.
 
@@ -357,7 +357,7 @@ Tasks include:
 Run the following Easy Script and select the task you want to perform. Run in a PVE host SSH terminal.
 
 ```Ubuntu NAS administration tasks
-bash -c "$(wget -qLO - https://raw.githubusercontent.com/ahuacate/pve-nas/main/pve_nas_toolbox.sh)"
+bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/pve_nas_toolbox.sh)"
 ```
 
 Your User account options are as follows.

@@ -7,7 +7,7 @@
 #---- Bash command to run script ---------------------------------------------------
 
 # Command to run script
-# bash -c "$(wget -qLO - https://raw.githubusercontent.com/ahuacate/pve-nas/main/src/ubuntu/pve_nas_ct_addjailuser.sh)"
+# bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/src/ubuntu/pve_nas_ct_addjailuser.sh)"
 
 #---- Source -----------------------------------------------------------------------
 
@@ -37,7 +37,7 @@ fi
 check_smtp_status
 if [ "$SMTP_STATUS" = 0 ]
 then
-  display_msg='\nBefore proceeding with this installer we RECOMMEND you first configure all PVE hosts to support SMTP email services. A working SMTP server emails the NAS System Administrator all new User login credentials, SSH keys, application specific login credentials and written guidelines. A PVE host SMTP server makes NAS administration much easier. Also be alerted about unwarranted login attempts and other system critical alerts. PVE Host SMTP Server installer is available in our PVE Host Toolbox located at GitHub:\n\n    --  https://github.com/ahuacate/pve-host\n'
+  display_msg='\nBefore proceeding with this installer we RECOMMEND you first configure all PVE hosts to support SMTP email services. A working SMTP server emails the NAS System Administrator all new User login credentials, SSH keys, application specific login credentials and written guidelines. A PVE host SMTP server makes NAS administration much easier. Also be alerted about unwarranted login attempts and other system critical alerts. PVE Host SMTP Server installer is available in our PVE Host Toolbox located at GitHub:\n\n    --  https://github.com/picasso566/pve-host\n'
 fi
 
 #---- Static Variables -------------------------------------------------------------

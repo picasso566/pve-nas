@@ -17,7 +17,7 @@ check_smtp_status
 if [ "$SMTP_STATUS" = 0 ]
 then
   # Options if SMTP is inactive
-  display_msg='Before proceeding with this installer we RECOMMEND you first configure all PVE hosts to support SMTP email services. A working SMTP server emails the NAS System Administrator all new User login credentials, SSH keys, application specific login credentials and written guidelines. A PVE host SMTP server makes NAS administration much easier. Also be alerted about unwarranted login attempts and other system critical alerts. PVE Host SMTP Server installer is available in our PVE Host Toolbox located at GitHub:\n\n    --  https://github.com/ahuacate/pve-host'
+  display_msg='Before proceeding with this installer we RECOMMEND you first configure all PVE hosts to support SMTP email services. A working SMTP server emails the NAS System Administrator all new User login credentials, SSH keys, application specific login credentials and written guidelines. A PVE host SMTP server makes NAS administration much easier. Also be alerted about unwarranted login attempts and other system critical alerts. PVE Host SMTP Server installer is available in our PVE Host Toolbox located at GitHub:\n\n    --  https://github.com/picasso566/pve-host'
 
   msg_box "#### PLEASE READ CAREFULLY ####\n\n$(echo ${display_msg})"
   echo
@@ -32,7 +32,7 @@ then
   if [ "$RESULTS" = 'TYPE01' ]
   then
     # Exit and install SMTP
-    msg "Go to our Github site and run our PVE Host Toolbox selecting our 'SMTP Email Setup' option:\n\n  --  https://github.com/ahuacate/pve-host\n\nRe-run the NAS installer after your have configured '$(hostname)' SMTP email support. Bye..."
+    msg "Go to our Github site and run our PVE Host Toolbox selecting our 'SMTP Email Setup' option:\n\n  --  https://github.com/picasso566/pve-host\n\nRe-run the NAS installer after your have configured '$(hostname)' SMTP email support. Bye..."
     echo
     exit 0
   elif [ "$RESULTS" = 'TYPE02' ]
