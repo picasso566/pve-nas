@@ -266,7 +266,6 @@ then
   # Selected RaidZ level
   inputRAIDLEVEL="$RESULTS"
 
-
   #---- Create new ZPool
 
   section "Create new ZFS Pool '${POOL^}'"
