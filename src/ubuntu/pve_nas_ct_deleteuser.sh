@@ -7,7 +7,7 @@
 #---- Bash command to run script ---------------------------------------------------
 
 # Command to run script
-# bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/pve_nas_toolbox.sh)"
+# bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/forkpaths/pve_nas_toolbox.sh)"
 
 #---- Source -----------------------------------------------------------------------
 

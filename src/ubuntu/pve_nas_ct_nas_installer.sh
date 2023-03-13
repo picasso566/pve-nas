@@ -7,7 +7,7 @@
 #---- Bash command to run script ---------------------------------------------------
 
 #---- Source Github
-# bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/pve_nas_installer.sh)"
+# bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/forkpaths/pve_nas_installer.sh)"
 
 #---- Source local Git
 # /mnt/pve/nas-01-git/picasso566/pve-nas/pve_nas_installer.sh

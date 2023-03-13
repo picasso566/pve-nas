@@ -7,7 +7,7 @@
 #---- Bash command to run script ---------------------------------------------------
 
 #---- Source Github
-# bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/pve_nas_toolbox.sh)"
+# bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/forkpaths/pve_nas_toolbox.sh)"
 
 #---- Source local Git
 # /mnt/pve/nas-01-git/picasso566/pve-nas/pve_nas_toolbox.sh
@@ -85,7 +85,7 @@ then
   source $REPO_PATH/common/bash/src/pve_repo_loader.sh
 else
   # Download Github loader
-  wget -qL - https://raw.githubusercontent.com/$GIT_USER/common/main/bash/src/pve_repo_loader.sh -O $REPO_TEMP/pve_repo_loader.sh
+  wget -qL - https://raw.githubusercontent.com/$GIT_USER/common/forkpaths/bash/src/pve_repo_loader.sh -O $REPO_TEMP/pve_repo_loader.sh
   chmod +x $REPO_TEMP/pve_repo_loader.sh
   source $REPO_TEMP/pve_repo_loader.sh
 fi

@@ -50,7 +50,7 @@ All builds include:
 
 <h2>Local DNS Records</h2>
 
-Before proceeding, we <span style="color:red">strongly advise</span> that you familiarize yourself with network Local DNS and the importance of having a PiHole server. To learn more, click <a href="https://github.com/picasso566/common/tree/main/pve/src/local_dns_records.md" target="_blank">here</a>.
+Before proceeding, we <span style="color:red">strongly advise</span> that you familiarize yourself with network Local DNS and the importance of having a PiHole server. To learn more, click <a href="https://github.com/picasso566/common/tree/forkpaths/pve/src/local_dns_records.md" target="_blank">here</a>.
 
 It is essential to set your network's Local Domain or Search domain. For residential and small networks, we recommend using only top-level domain (spTLD) names because they cannot be resolved across the internet. Routers and DNS servers understand that ARPA requests they do not recognize should not be forwarded onto the public internet. It is best to select one of the following names: local, home.arpa, localdomain, or lan only. We strongly advise against using made-up names.
 
@@ -100,13 +100,13 @@ However, before proceeding, we highly recommend that you read our guide to fully
 Use this script to start the PVE NAS installer for all PVE NAS types. The User will be prompted to select an installation type (i.e Ubuntu, USB, OMV). Run in a PVE host SSH terminal.
 
 ```bash
-bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/pve_nas_installer.sh)"
+bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/forkpaths/pve_nas_installer.sh)"
 ```
 <h4><b>2) PVE Ubuntu NAS Toolbox Easy Script</b></h4>
 For creating and deleting user accounts, installing optional add-ons and upgrading your Ubuntu NAS OS. Run in your PVE host SSH terminal.
 
 ```bash
-bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/pve_nas_toolbox.sh)"
+bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/forkpaths/pve_nas_toolbox.sh)"
 ```
 
 <hr>
@@ -182,7 +182,7 @@ Prepare your PVE host with a PCIe SAS/SATA/NVMe HBA Adapter Card (i.e LSI 9207-8
 Use this script to start the PVE NAS Installer. You will be prompted to select an installation type. Select `Omv Nas - OMV based NAS`. Run in a PVE host SSH terminal.
 
 ```bash
-bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/pve_nas_installer.sh)"
+bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/forkpaths/pve_nas_installer.sh)"
 ```
 
 ## 2.2. PCIe Passthrough (optional)
@@ -204,7 +204,7 @@ Prepare all new disks by wiping them. You can also re-connect to an existing Ubu
 Use this script to start the PVE NAS Installer. The User will be prompted to select an installation type. Select `Ubuntu Nas - Ubuntu CT based NAS`. Run in your PVE host SSH terminal.
 
 ```bash
-bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/pve_nas_installer.sh)"
+bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/forkpaths/pve_nas_installer.sh)"
 ```
 
 ## 3.2. Supported File Systems
@@ -275,7 +275,7 @@ Tasks include:
 Run the following Easy Script, select your and select the task you want to perform. Run in a PVE host SSH terminal.
 
 ```Ubuntu NAS administration tasks
-bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/pve_nas_toolbox.sh)"
+bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/forkpaths/pve_nas_toolbox.sh)"
 ```
 
 <hr>
@@ -357,7 +357,7 @@ Tasks include:
 Run the following Easy Script and select the task you want to perform. Run in a PVE host SSH terminal.
 
 ```Ubuntu NAS administration tasks
-bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/pve_nas_toolbox.sh)"
+bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/forkpaths/pve_nas_toolbox.sh)"
 ```
 
 Your User account options are as follows.

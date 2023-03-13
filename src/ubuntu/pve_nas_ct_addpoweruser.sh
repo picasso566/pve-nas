@@ -7,7 +7,7 @@
 #---- Bash command to run script ---------------------------------------------------
 
 # Command to run script
-# bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/main/src/ubuntu/pve_nas_ct_addpoweruser.sh)"
+# bash -c "$(wget -qLO - https://raw.githubusercontent.com/picasso566/pve-nas/forkpaths/src/ubuntu/pve_nas_ct_addpoweruser.sh)"
 
 #---- Source -----------------------------------------------------------------------
 
