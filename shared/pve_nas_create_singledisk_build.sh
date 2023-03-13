@@ -195,7 +195,7 @@ do
           do
             # Full device wipeout
             sgdisk --zap $dev >/dev/null 2>&1
-            dd if=/dev/zero of=$dev bs=1M status=progress
+            #dd if=/dev/zero of=$dev bs=1M status=progress
             wipefs --all --force $dev >/dev/null 2>&1
             info "Zapped, destroyed & wiped device: $dev"
           done < <( printf '%s\n' "${inputdevLIST[@]}" | grep 'sd[a-z]$\|nvme[0-9]n[0-9]$' | uniq ) # file listing of disks to erase
@@ -315,7 +315,7 @@ then
   do
     # Full device wipeout
     sgdisk --zap $dev >/dev/null 2>&1
-    dd if=/dev/zero of=$dev bs=1M status=progress
+    #dd if=/dev/zero of=$dev bs=1M status=progress
     wipefs -a -f $dev >/dev/null 2>&1
     # Wait for pending udev events
     udevadm settle

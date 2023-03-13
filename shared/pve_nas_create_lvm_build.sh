@@ -370,7 +370,7 @@ then
   do
     # Full device wipeout
     sgdisk --zap /dev/disk/by-id/$dev >/dev/null 2>&1
-    dd if=/dev/urandom of=/dev/disk/by-id/$dev bs=1M count=1 conv=notrunc 2>/dev/null
+    #dd if=/dev/urandom of=/dev/disk/by-id/$dev bs=1M count=1 conv=notrunc 2>/dev/null
     wipefs --all --force /dev/disk/by-id/$dev >/dev/null 2>&1
     info "wipefs - wiped device: $dev"
   done < <( printf '%s\n' "${inputdiskLIST[@]}" | awk -F':' '{ print $1 }' ) # file listing of disks to erase

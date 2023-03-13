@@ -161,7 +161,7 @@ then
         while read dev
         do
           sgdisk --zap /dev/disk/by-id/$dev >/dev/null 2>&1
-          dd if=/dev/urandom of=/dev/disk/by-id/$dev bs=1M count=1 conv=notrunc 2>/dev/null
+          #dd if=/dev/urandom of=/dev/disk/by-id/$dev bs=1M count=1 conv=notrunc 2>/dev/null
           wipefs --all --force /dev/disk/by-id/$dev >/dev/null 2>&1
           info "Destroyed and wiped disk:\n       /dev/disk/by-id/$dev"
         done < <( printf '%s\n' "${zpoolbyiddisk_LIST[@]}" ) # file listing of disks to erase
@@ -276,7 +276,7 @@ then
   while read dev
   do
     sgdisk --zap $dev >/dev/null 2>&1
-    dd if=/dev/urandom of=$dev count=1 bs=1M conv=notrunc 2>/dev/null
+    #dd if=/dev/urandom of=$dev count=1 bs=1M conv=notrunc 2>/dev/null
     wipefs --all --force $dev >/dev/null 2>&1
     info "Zapped, destroyed & wiped device: $dev"
   done < <( printf '%s\n' "${inputdiskLIST[@]}" | awk -F':' '{ print $1 }' ) # file listing of disks to erase
