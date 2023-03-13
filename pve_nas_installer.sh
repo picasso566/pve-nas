@@ -21,7 +21,7 @@ GIT_USER='picasso566'
 # Git repository
 GIT_REPO='pve-nas'
 # Git branch
-GIT_BRANCH='main'
+GIT_BRANCH='forkpaths'
 # Git common
 GIT_COMMON='0'
 
