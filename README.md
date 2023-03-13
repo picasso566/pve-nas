@@ -336,7 +336,7 @@ The script will attempt to find your Gateway IPv4 address. Confirm with `Enter` 
 
 ## 4.9. NAS Root Password
 
-The default root password is 'ahuacate'. You can always change it at a later stage.
+The default root password is 'picasso566'. You can always change it at a later stage.
 
 <hr>
 
@@ -434,7 +434,7 @@ All Home folders are automatically suffixed: `username_injail`.
 ## 6.1. What's the NAS root password?
 Installation default credentials for Ubuntu based NAS:
 * User:  root
-* Password:  ahuacate
+* Password:  picasso566
 
 Default credentials for OMV NAS:
 * User:  admin

@@ -318,7 +318,7 @@ VM_MEDIA=cdrom
 OPTION_STATUS='1:0'
 # Root credentials
 VM_CIUSER='root'
-VM_CIPASSWORD='ahuacate'
+VM_CIPASSWORD='picasso566'
 # Specifies the cloud-init configuration format. Use the nocloud format for Linux, and configdrive2 for windows.
 VM_CITYPE='nocloud'
 # Sets DNS server IP address for a container.

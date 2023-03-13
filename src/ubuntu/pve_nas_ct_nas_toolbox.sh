@@ -63,7 +63,7 @@ OPTIONS_LABELS_INPUT=( "Power User Account - add a new user to the system" \
 "Delete Users - delete any user account (option to users keep home folder)" \
 "Upgrade NAS OS - software packages, OS and patches" \
 "Install Fail2Ban $(if [ "$(pct exec $CTID -- dpkg -s fail2ban >/dev/null 2>&1; echo $?)" = 0 ]; then echo "( installed & active )"; else echo "( not installed )"; fi)" \
-"Install SMTP Email Support  $(if [ "$(pct exec $CTID -- bash -c 'if [ -f /etc/postfix/main.cf ]; then grep --color=never -Po "^ahuacate_smtp=\K.*" "/etc/postfix/main.cf" || true; else echo 0; fi')" = 1 ]; then echo "( installed & active )"; else echo "( not installed - recommended installation )"; fi)" \
+"Install SMTP Email Support  $(if [ "$(pct exec $CTID -- bash -c 'if [ -f /etc/postfix/main.cf ]; then grep --color=never -Po "^picasso566_smtp=\K.*" "/etc/postfix/main.cf" || true; else echo 0; fi')" = 1 ]; then echo "( installed & active )"; else echo "( not installed - recommended installation )"; fi)" \
 "Install ProFTPd Server $(if [ "$(pct exec $CTID -- dpkg -s proftpd-core >/dev/null 2>&1; echo $?)" = 0 ]; then echo "( installed & active )"; else echo "( not installed )"; fi)" \
 "Add ZFS Cache - create ARC/L2ARC/ZIL cache with dedicated SSD/NVMe drives" \
 "Restore & update default storage - reset default dirs, permissions and ACLs" \
@@ -77,7 +77,7 @@ then
   if [ "$SMTP_STATUS" = 1 ]
   then
     # PVE SMTP supported, check NAS
-    if [ ! "$(pct exec $CTID -- bash -c 'if [ -f /etc/postfix/main.cf ]; then grep --color=never -Po "^ahuacate_smtp=\K.*" "/etc/postfix/main.cf" || true; else echo 0; fi')" = 1 ]
+    if [ ! "$(pct exec $CTID -- bash -c 'if [ -f /etc/postfix/main.cf ]; then grep --color=never -Po "^picasso566_smtp=\K.*" "/etc/postfix/main.cf" || true; else echo 0; fi')" = 1 ]
     then 
       # Install and Configure SMTP Email on NAS
       source $REPO_TEMP/$GIT_REPO/common/pve/src/pvesource_install_postfix_client.sh
@@ -91,7 +91,7 @@ then
   if [ "$SMTP_STATUS" = 1 ]
   then
     # PVE SMTP supported, check NAS
-    if [ ! "$(pct exec $CTID -- bash -c 'if [ -f /etc/postfix/main.cf ]; then grep --color=never -Po "^ahuacate_smtp=\K.*" "/etc/postfix/main.cf" || true; else echo 0; fi')" = 1 ]
+    if [ ! "$(pct exec $CTID -- bash -c 'if [ -f /etc/postfix/main.cf ]; then grep --color=never -Po "^picasso566_smtp=\K.*" "/etc/postfix/main.cf" || true; else echo 0; fi')" = 1 ]
     then 
       # Install and Configure SMTP Email on NAS
       source $REPO_TEMP/$GIT_REPO/common/pve/src/pvesource_install_postfix_client.sh

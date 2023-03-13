@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ----------------------------------------------------------------------------------
 # Filename:     nas_create_users.sh
-# Description:  Create Ahuacate base Groups and Users (medialab, homelab, private etc)
+# Description:  Create picasso566 base Groups and Users (medialab, homelab, private etc)
 # ----------------------------------------------------------------------------------
 
 #---- Bash command to run script ---------------------------------------------------

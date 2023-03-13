@@ -2,4 +2,4 @@
 [submodule "common"]
 	path = common
 	url = https://github.com/picasso566/common.git
-	branch = main
+	branch = forkpaths

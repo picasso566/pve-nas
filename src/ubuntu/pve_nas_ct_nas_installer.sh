@@ -116,7 +116,7 @@ CT_ONBOOT='1'
 # Timezone
 CT_TIMEZONE='host'
 # Root credentials
-CT_PASSWORD='ahuacate'
+CT_PASSWORD='picasso566'
 # Virtual OS/processor architecture.
 CT_ARCH='amd64'
 
@@ -387,7 +387,7 @@ else
   display_msg2=( "Fail2ban SW:not installed" )
 fi
 # Check SMTP Mailserver Status
-if [ "$(pct exec $CTID -- bash -c 'if [ -f /etc/postfix/main.cf ]; then grep --color=never -Po "^ahuacate_smtp=\K.*" "/etc/postfix/main.cf" || true; else echo 0; fi')" = 1 ]
+if [ "$(pct exec $CTID -- bash -c 'if [ -f /etc/postfix/main.cf ]; then grep --color=never -Po "^picasso566_smtp=\K.*" "/etc/postfix/main.cf" || true; else echo 0; fi')" = 1 ]
 then
   display_msg2+=( "SMTP Mail Server:installed" )
 else

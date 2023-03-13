@@ -50,9 +50,9 @@ To: ${PVE_ROOT_EMAIL}
 From: donotreply@${HOSTNAME}.local
 Subject: Login Credentials for NAS user: ${USER}
 Mime-Version: 1.0
-Content-Type: multipart/mixed; boundary="ahuacate"
+Content-Type: multipart/mixed; boundary="picasso566"
 
---ahuacate
+--picasso566
 Content-Type: text/html
 
 <h3><strong>---- Login credentials for user '${USER^^}' ${HOSTNAME^} account</strong></h3>
@@ -150,7 +150,7 @@ fi)
 <li>Private SSH Key (PPK version) : id_${USER,,}_ed25519.ppk</li>
 </ol>
 
---ahuacate
+--picasso566
 Content-Type: application/zip
 Content-Disposition: attachment; filename="id_${USER,,}_ed25519"
 Content-Transfer-Encoding: base64
@@ -160,7 +160,7 @@ elif [ ${GROUP} = chrootjail ]; then
     echo '$(openssl base64 < /${HOME_BASE}${USER}/.ssh/id_${USER,,}_ed25519)'
 fi)
 
---ahuacate
+--picasso566
 Content-Type: application/zip
 Content-Disposition: attachment; filename="id_${USER,,}_ed25519.ppk"
 Content-Transfer-Encoding: base64
@@ -170,5 +170,5 @@ elif [ ${GROUP} = chrootjail ]; then
     echo '$(openssl base64 < /${HOME_BASE}${USER}/.ssh/id_${USER,,}_ed25519.ppk)'
 fi)
 
---ahuacate
+--picasso566
 EOF
